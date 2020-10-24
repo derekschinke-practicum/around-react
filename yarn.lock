@@ -1981,7 +1981,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^7.26.0":
+"@testing-library/dom@npm:^7.26.0, @testing-library/dom@npm:^7.26.3":
   version: 7.26.3
   resolution: "@testing-library/dom@npm:7.26.3"
   dependencies:
@@ -2937,6 +2937,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "around-react@workspace:."
   dependencies:
+    "@testing-library/dom": ^7.26.3
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
