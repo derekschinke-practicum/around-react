@@ -1453,6 +1453,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eslint/eslintrc@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@eslint/eslintrc@npm:0.2.0"
+  dependencies:
+    ajv: ^6.12.4
+    debug: ^4.1.1
+    espree: ^7.3.0
+    globals: ^12.1.0
+    ignore: ^4.0.6
+    import-fresh: ^3.2.1
+    js-yaml: ^3.13.1
+    lodash: ^4.17.19
+    minimatch: ^3.0.4
+    strip-json-comments: ^3.1.1
+  checksum: bdc8346add0fe57337c09134f19e693fa8a3c03357bf54c05de2270388774b0469b6d6dbd9f368cbd5de53919c4c9e8b644177acc417ea1ff4f99cbf32feefa6
+  languageName: node
+  linkType: hard
+
 "@hapi/address@npm:2.x.x":
   version: 2.1.4
   resolution: "@hapi/address@npm:2.1.4"
@@ -2941,7 +2959,9 @@ __metadata:
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
+    eslint: ^7.12.0
     eslint-config-react-app: ^6.0.0
+    prettier: ^2.1.2
     react: ^17.0.1
     react-dom: ^17.0.1
     react-refresh: ^0.9.0
@@ -5988,6 +6008,53 @@ __metadata:
   bin:
     eslint: bin/eslint.js
   checksum: 45ef6dc7b31684ca0f383ed9c6224e763197e1d49745542f4440e37286c947973388a6a7ebbf103eeee91ddb4af2652c5d22718f4130bfbbf4bd16a04103f82a
+  languageName: node
+  linkType: hard
+
+"eslint@npm:^7.12.0":
+  version: 7.12.0
+  resolution: "eslint@npm:7.12.0"
+  dependencies:
+    "@babel/code-frame": ^7.0.0
+    "@eslint/eslintrc": ^0.2.0
+    ajv: ^6.10.0
+    chalk: ^4.0.0
+    cross-spawn: ^7.0.2
+    debug: ^4.0.1
+    doctrine: ^3.0.0
+    enquirer: ^2.3.5
+    eslint-scope: ^5.1.1
+    eslint-utils: ^2.1.0
+    eslint-visitor-keys: ^2.0.0
+    espree: ^7.3.0
+    esquery: ^1.2.0
+    esutils: ^2.0.2
+    file-entry-cache: ^5.0.1
+    functional-red-black-tree: ^1.0.1
+    glob-parent: ^5.0.0
+    globals: ^12.1.0
+    ignore: ^4.0.6
+    import-fresh: ^3.0.0
+    imurmurhash: ^0.1.4
+    is-glob: ^4.0.0
+    js-yaml: ^3.13.1
+    json-stable-stringify-without-jsonify: ^1.0.1
+    levn: ^0.4.1
+    lodash: ^4.17.19
+    minimatch: ^3.0.4
+    natural-compare: ^1.4.0
+    optionator: ^0.9.1
+    progress: ^2.0.0
+    regexpp: ^3.1.0
+    semver: ^7.2.1
+    strip-ansi: ^6.0.0
+    strip-json-comments: ^3.1.0
+    table: ^5.2.3
+    text-table: ^0.2.0
+    v8-compile-cache: ^2.0.3
+  bin:
+    eslint: bin/eslint.js
+  checksum: 22f86c0ebaf75993d197d230a8c35f11ba4ffc7cd0b280aeecb28a04c26446b9e6906eedee264a445311a3b9b31f9bca787ee58546acc087cb2c1056ca89f624
   languageName: node
   linkType: hard
 
@@ -11455,6 +11522,15 @@ fsevents@^1.2.7:
   version: 1.0.4
   resolution: "prepend-http@npm:1.0.4"
   checksum: f723f34a23394b568a9ff0cd502bdda244b343c03b12a259343566eab1184cf41a6c7e9975d9e6010ccb2901b7c428d296e56a67a72d0a6ecb0f13531a3fa44e
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "prettier@npm:2.1.2"
+  bin:
+    prettier: bin-prettier.js
+  checksum: bedc24c568efbcfe45f255558900777e2fabb36bf28ed4c22d2456eb22dfb012d12e566a46472ea5b857a4e9f263e888f7e316527d00bb58188f1820b0b0031a
   languageName: node
   linkType: hard
 
