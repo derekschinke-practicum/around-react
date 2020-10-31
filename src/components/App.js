@@ -1,6 +1,7 @@
 import Footer from './Footer.js';
 import Header from './Header.js';
 import Main from './Main.js';
+import PopupWithForm from './PopupWithForm.js';
 
 function App() {
   return (
