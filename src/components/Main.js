@@ -1,4 +1,17 @@
 function Main() {
+  function handleEditAvatarClick() {
+    const editAvatarPopup = document.querySelector('.popup_type_edit-avatar');
+    editAvatarPopup.classList.add('popup_opened');
+  }
+  function handleEditProfileClick() {
+    const editProfilePopup = document.querySelector('.popup_type_edit');
+    editProfilePopup.classList.add('popup_opened');
+  }
+  function handleAddPlaceClick() {
+    const addPlacePopup = document.querySelector('.popup_type_add');
+    addPlacePopup.classList.add('popup_opened');
+  }
+
   return (
     <main className="main">
       <section className="profile">
@@ -9,6 +22,7 @@ function Main() {
               type="button"
               aria-label="Edit avatar"
               className="button button_type_edit-avatar"
+              onClick={handleEditAvatarClick}
             ></button>
           </div>
           <div className="profile__info">
@@ -20,12 +34,14 @@ function Main() {
               type="button"
               aria-label="Edit profile"
               className="button button_type_edit"
+              onClick={handleEditProfileClick}
             ></button>
           </div>
         </div>
         <button
           aria-label="Add card"
           className="button button_type_add"
+          onClick={handleAddPlaceClick}
         ></button>
       </section>
 
