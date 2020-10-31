@@ -1,52 +1,14 @@
+import Footer from './Footer.js';
+import Header from './Header.js';
+import Main from './Main.js';
+
 function App() {
   return (
     <div className="page">
       <div className="page__container">
-        <header className="header">
-          <div
-            role="img"
-            aria-label="Around The U.S."
-            className="header__logo"
-          ></div>
-        </header>
-
-        <main className="main">
-          <section className="profile">
-            <div className="profile__data">
-              <div>
-                <div role="img" aria-label="" className="profile__avatar"></div>
-                <button
-                  type="button"
-                  aria-label="Edit avatar"
-                  className="button button_type_edit-avatar"
-                ></button>
-              </div>
-              <div className="profile__info">
-                <div className="profile__text">
-                  <h1 className="profile__name"></h1>
-                  <p className="profile__job"></p>
-                </div>
-                <button
-                  type="button"
-                  aria-label="Edit profile"
-                  className="button button_type_edit"
-                ></button>
-              </div>
-            </div>
-            <button
-              aria-label="Add card"
-              className="button button_type_add"
-            ></button>
-          </section>
-
-          <section className="places">
-            <ul className="places__list"></ul>
-          </section>
-        </main>
-
-        <footer className="footer">
-          <p className="footer__text">© 2020 Around The U.S.</p>
-        </footer>
+        <Header />
+        <Main />
+        <Footer />
 
         <div className="popup popup_type_edit">
           <div className="popup__container">
