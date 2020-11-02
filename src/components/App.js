@@ -1,3 +1,4 @@
+import React from 'react';
 import Footer from './Footer.js';
 import Header from './Header.js';
 import Main from './Main.js';
@@ -5,143 +6,120 @@ import PopupWithForm from './PopupWithForm.js';
 import PopupWithImage from './PopupWithImage.js';
 
 function App() {
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(
+    false
+  );
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(
+    false
+  );
+  const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
+
+  function handleEditAvatarClick() {
+    setIsEditAvatarPopupOpen(true);
+  }
+  function handleEditProfileClick() {
+    setIsEditProfilePopupOpen(true);
+  }
+  function handleAddPlaceClick() {
+    setIsAddPlacePopupOpen(true);
+  }
+
   return (
     <div className="page">
       <div className="page__container">
         <Header />
-        <Main />
+        <Main
+          onEditAvatar={handleEditAvatarClick}
+          onEditProfile={handleEditProfileClick}
+          onAddPlace={handleAddPlaceClick}
+        />
         <Footer />
 
-        <div className="popup popup_type_edit">
-          <div className="popup__container">
-            <button
-              type="button"
-              aria-label="Close"
-              className="button button_type_close"
-            ></button>
-            <h3 className="popup__title">Edit profile</h3>
-            <form
-              method="POST"
-              name="popup_type_edit"
-              className="popup__form popup__form_type_edit"
-            >
-              <label>
-                <input
-                  type="text"
-                  name="name"
-                  id="profile-name"
-                  className="popup__input popup__input_type_name"
-                  placeholder="Name"
-                  required
-                  minlength="2"
-                  maxlength="40"
-                />
-                <span className="popup__error" id="profile-name-error"></span>
-              </label>
+        <PopupWithForm
+          name="edit"
+          title="Edit profile"
+          buttonValue="Save"
+          isOpen={isEditProfilePopupOpen}
+        >
+          <label>
+            <input
+              type="text"
+              name="name"
+              id="profile-name"
+              className="popup__input popup__input_type_name"
+              placeholder="Name"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+            <span className="popup__error" id="profile-name-error"></span>
+          </label>
+          <label>
+            <input
+              type="text"
+              name="job"
+              id="profile-job"
+              className="popup__input popup__input_type_job"
+              placeholder="About me"
+              required
+              minlength="2"
+              maxlength="200"
+            />
+            <span className="popup__error" id="profile-job-error"></span>
+          </label>
+        </PopupWithForm>
 
-              <label>
-                <input
-                  type="text"
-                  name="job"
-                  id="profile-job"
-                  className="popup__input popup__input_type_job"
-                  placeholder="About me"
-                  required
-                  minlength="2"
-                  maxlength="200"
-                />
-                <span className="popup__error" id="profile-job-error"></span>
-              </label>
+        <PopupWithForm
+          name="edit-avatar"
+          title="Change profile picture"
+          buttonValue="Save"
+          isOpen={isEditAvatarPopupOpen}
+        >
+          <label>
+            <input
+              type="url"
+              name="url"
+              id="profile-avatar"
+              className="popup__input"
+              placeholder="Image link"
+              required
+            />
+            <span className="popup__error" id="profile-avatar-error"></span>
+          </label>
+        </PopupWithForm>
 
-              <input
-                type="submit"
-                value="Save"
-                className="button button_type_submit popup__button"
-              />
-            </form>
-          </div>
-        </div>
+        <PopupWithForm
+          name="add"
+          title="New place"
+          buttonValue="Create"
+          isOpen={isAddPlacePopupOpen}
+        >
+          <label>
+            <input
+              type="text"
+              name="title"
+              id="card-title"
+              className="popup__input popup__input_type_title"
+              placeholder="Title"
+              required
+              minlength="2"
+              maxlength="30"
+            />
+            <span className="popup__error" id="card-title-error"></span>
+          </label>
 
-        <div className="popup popup_type_edit-avatar">
-          <div className="popup__container">
-            <button
-              type="button"
-              aria-label="Close"
-              className="button button_type_close"
-            ></button>
-            <h3 className="popup__title">Change profile picture</h3>
-            <form
-              method="POST"
-              name="popup_type_edit-avatar"
-              className="popup__form"
-            >
-              <label>
-                <input
-                  type="url"
-                  name="url"
-                  id="profile-avatar"
-                  className="popup__input"
-                  placeholder="Image link"
-                  required
-                />
-                <span className="popup__error" id="profile-avatar-error"></span>
-              </label>
-              <input
-                type="submit"
-                value="Save"
-                className="button button_type_submit popup__button"
-              />
-            </form>
-          </div>
-        </div>
-
-        <div className="popup popup_type_add">
-          <div className="popup__container">
-            <button
-              type="button"
-              aria-label="Close"
-              className="button button_type_close"
-            ></button>
-            <h3 className="popup__title">New place</h3>
-            <form
-              method="POST"
-              name="popup_type_add"
-              className="popup__form popup__form_type_add"
-            >
-              <label>
-                <input
-                  type="text"
-                  name="title"
-                  id="card-title"
-                  className="popup__input popup__input_type_title"
-                  placeholder="Title"
-                  required
-                  minlength="2"
-                  maxlength="30"
-                />
-                <span className="popup__error" id="card-title-error"></span>
-              </label>
-
-              <label>
-                <input
-                  type="url"
-                  name="url"
-                  id="card-url"
-                  className="popup__input popup__input_type_image-url"
-                  placeholder="Image link"
-                  required
-                />
-                <span className="popup__error" id="card-url-error"></span>
-              </label>
-
-              <input
-                type="submit"
-                value="Create"
-                className="button button_type_submit popup__button"
-              />
-            </form>
-          </div>
-        </div>
+          <label>
+            <input
+              type="url"
+              name="url"
+              id="card-url"
+              className="popup__input popup__input_type_image-url"
+              placeholder="Image link"
+              required
+            />
+            <span className="popup__error" id="card-url-error"></span>
+          </label>
+        </PopupWithForm>
 
         <div className="popup popup_type_delete">
           <div className="popup__container">
