@@ -1,7 +1,7 @@
 .header__logo {
   width: 173px;
   height: 33px;
-  background: url('../../../images/logo.svg') center/173px 33px;
+  background: url(../../../images/logo.svg) center/173px 33px;
 }
 
 @media screen and (max-width: 919px) {
