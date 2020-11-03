@@ -28,7 +28,7 @@ function Main(props) {
         <button
           aria-label="Add card"
           className="button button_type_add"
-          onClick={props.onAddPlace}
+          onClick={props.onAddCard}
         ></button>
       </section>
 

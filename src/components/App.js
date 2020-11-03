@@ -12,7 +12,7 @@ function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(
     false
   );
-  const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
+  const [isAddCardPopupOpen, setIsAddCardPopupOpen] = React.useState(false);
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
@@ -21,7 +21,16 @@ function App() {
     setIsEditProfilePopupOpen(true);
   }
   function handleAddPlaceClick() {
-    setIsAddPlacePopupOpen(true);
+    setIsAddCardPopupOpen(true);
+  }
+
+  function handleCloseAllPopups(evt) {
+    if (evt.target !== evt.currentTarget) return;
+    setIsEditAvatarPopupOpen(false);
+    setIsEditProfilePopupOpen(false);
+    setIsAddCardPopupOpen(false);
+    // setIsDeletePopupOpen(false);
+    // setIsImagePopupOpen(false);
   }
 
   return (
@@ -31,7 +40,7 @@ function App() {
         <Main
           onEditAvatar={handleEditAvatarClick}
           onEditProfile={handleEditProfileClick}
-          onAddPlace={handleAddPlaceClick}
+          onAddCard={handleAddPlaceClick}
         />
         <Footer />
 
@@ -40,6 +49,7 @@ function App() {
           title="Edit profile"
           buttonValue="Save"
           isOpen={isEditProfilePopupOpen}
+          onClose={handleCloseAllPopups}
         >
           <label>
             <input
@@ -92,7 +102,8 @@ function App() {
           name="add"
           title="New place"
           buttonValue="Create"
-          isOpen={isAddPlacePopupOpen}
+          isOpen={isAddCardPopupOpen}
+          onClose={handleCloseAllPopups}
         >
           <label>
             <input
@@ -121,7 +132,16 @@ function App() {
           </label>
         </PopupWithForm>
 
-        <div className="popup popup_type_delete">
+        <PopupWithForm
+          name="delete"
+          title="Are you sure?"
+          buttonValue="Yes"
+          // isOpen={}
+          onClose={handleCloseAllPopups}
+          shouldNotValidate={true}
+        ></PopupWithForm>
+
+        {/* <div className="popup popup_type_delete">
           <div className="popup__container">
             <button
               type="button"
@@ -141,7 +161,7 @@ function App() {
               />
             </form>
           </div>
-        </div>
+        </div> */}
 
         <PopupWithImage />
       </div>
