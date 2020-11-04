@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.profile__avatar:hover ~ .button_type_edit-avatar {
+.profile__avatar:hover + .button_type_edit-avatar {
   z-index: 1;
 }
 
