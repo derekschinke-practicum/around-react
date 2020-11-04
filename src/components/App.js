@@ -84,6 +84,7 @@ function App() {
           title="Change profile picture"
           buttonValue="Save"
           isOpen={isEditAvatarPopupOpen}
+          onClose={handleCloseAllPopups}
         >
           <label>
             <input
