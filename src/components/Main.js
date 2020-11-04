@@ -1,10 +1,13 @@
 import React from 'react';
 import api from '../utils/api.js';
+import Card from './Card.js';
 
 function Main(props) {
   const [userAvatar, setUserAvatar] = React.useState('');
   const [userName, setUserName] = React.useState('');
   const [userDescription, setUserDescription] = React.useState('');
+
+  const [cards, setCards] = React.useState([]);
 
   React.useEffect(() => {
     api
@@ -15,7 +18,20 @@ function Main(props) {
         setUserDescription(res.about);
       })
       .catch((err) => console.log(err));
-  });
+
+    api
+      .getInitialCards()
+      .then((res) =>
+        setCards(
+          res.map((card) => ({
+            link: card.link,
+            name: card.name,
+            likes: card.likes,
+          }))
+        )
+      )
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <main className="main">
@@ -57,7 +73,16 @@ function Main(props) {
       </section>
 
       <section className="places">
-        <ul className="places__list"></ul>
+        <ul className="places__list">
+          {cards.map((card, index) => (
+            <Card
+              key={index}
+              link={card.link}
+              title={card.name}
+              likes={card.likes.length}
+            />
+          ))}
+        </ul>
       </section>
     </main>
   );
