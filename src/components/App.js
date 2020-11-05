@@ -13,6 +13,12 @@ function App() {
     false
   );
   const [isAddCardPopupOpen, setIsAddCardPopupOpen] = React.useState(false);
+  const [isImagePopupOpen, setIsImagePopupOpen] = React.useState(false);
+
+  const [selectedCard, setSelectedCard] = React.useState({
+    link: '',
+    name: '',
+  });
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
@@ -23,14 +29,17 @@ function App() {
   function handleAddPlaceClick() {
     setIsAddCardPopupOpen(true);
   }
+  function handleCardClick(card) {
+    setSelectedCard({ link: card.link, name: card.name });
+    setIsImagePopupOpen(true);
+  }
 
   function handleCloseAllPopups(evt) {
     if (evt.target !== evt.currentTarget) return;
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddCardPopupOpen(false);
-    // setIsDeletePopupOpen(false);
-    // setIsImagePopupOpen(false);
+    setIsImagePopupOpen(false);
   }
 
   return (
@@ -41,6 +50,7 @@ function App() {
           onEditAvatar={handleEditAvatarClick}
           onEditProfile={handleEditProfileClick}
           onAddCard={handleAddPlaceClick}
+          onCardClick={(card) => handleCardClick(card)}
         />
         <Footer />
 
@@ -59,8 +69,8 @@ function App() {
               className="popup__input popup__input_type_name"
               placeholder="Name"
               required
-              minlength="2"
-              maxlength="40"
+              minLength="2"
+              maxLength="40"
             />
             <span className="popup__error" id="profile-name-error"></span>
           </label>
@@ -72,8 +82,8 @@ function App() {
               className="popup__input popup__input_type_job"
               placeholder="About me"
               required
-              minlength="2"
-              maxlength="200"
+              minLength="2"
+              maxLength="200"
             />
             <span className="popup__error" id="profile-job-error"></span>
           </label>
@@ -114,8 +124,8 @@ function App() {
               className="popup__input popup__input_type_title"
               placeholder="Title"
               required
-              minlength="2"
-              maxlength="30"
+              minLength="2"
+              maxLength="30"
             />
             <span className="popup__error" id="card-title-error"></span>
           </label>
@@ -133,38 +143,11 @@ function App() {
           </label>
         </PopupWithForm>
 
-        <PopupWithForm
-          name="delete"
-          title="Are you sure?"
-          buttonValue="Yes"
-          // isOpen={}
+        <PopupWithImage
+          card={selectedCard}
+          isOpen={isImagePopupOpen}
           onClose={handleCloseAllPopups}
-          shouldNotValidate={true}
-        ></PopupWithForm>
-
-        {/* <div className="popup popup_type_delete">
-          <div className="popup__container">
-            <button
-              type="button"
-              aria-label="Close"
-              className="button button_type_close"
-            ></button>
-            <h3 className="popup__title">Are you sure?</h3>
-            <form
-              method="POST"
-              className="popup__form popup__form_type_delete"
-              novalidate
-            >
-              <input
-                type="submit"
-                value="Yes"
-                className="button button_type_submit popup__button"
-              />
-            </form>
-          </div>
-        </div> */}
-
-        <PopupWithImage />
+        />
       </div>
     </div>
   );

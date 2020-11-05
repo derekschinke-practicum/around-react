@@ -1,21 +1,23 @@
 function Card(props) {
   return (
-    <li class="card">
-      <button type="button" class="button button_type_delete"></button>
+    <li className="card">
+      <button type="button" className="button button_type_delete"></button>
       <div
         role="img"
-        class="card__image"
+        className="card__image"
         style={{ backgroundImage: `url(${props.link})` }}
+        alt={props.name}
+        onClick={props.onCardClick}
       ></div>
-      <div class="card__info">
-        <h2 class="card__title">{props.title}</h2>
+      <div className="card__info">
+        <h2 className="card__title">{props.name}</h2>
         <div>
           <button
             type="button"
             aria-label="Like"
-            class="button button_type_like"
+            className="button button_type_like"
           ></button>
-          <p class="card__likes">{props.likes}</p>
+          <p className="card__likes">{props.likes}</p>
         </div>
       </div>
     </li>

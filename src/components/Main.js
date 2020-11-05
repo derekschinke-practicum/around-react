@@ -78,8 +78,9 @@ function Main(props) {
             <Card
               key={index}
               link={card.link}
-              title={card.name}
+              name={card.name}
               likes={card.likes.length}
+              onCardClick={() => props.onCardClick(card)}
             />
           ))}
         </ul>
