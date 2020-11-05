@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+# Project 10: Around The U.S. React
+
+## [Web Developer from Practicum by Yandex](https://practicum.yandex.com/web/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Overview
+
+This project is part of the **Creating an Interface with React** sprint for the Web Developer course at Practicum by Yandex.
+
+### Technologies Used
+
+HTML, CSS, JS, and JSX technologies it demonstrates are:
+
+- React
+- Yarn 2, [Zero-Installs](https://yarnpkg.com/features/zero-installs)
+- flexbox
+- <abbr title="Block, Element, Modifier">BEM</abbr> methodology
+- media queries for responsiveness
+- <abbr title="application programming interface">API</abbr> calls and asynchronous functions
+
+The website can be accessed [here](https://derekschinke-practicum.github.io/around-react/).
+
+###### [Yandex.Practicum](https://practicum.yandex.com/) | [Яндекс.Практикум](https://praktikum.yandex.ru/)
 
 ## Available Scripts
 
