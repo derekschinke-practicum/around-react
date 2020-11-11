@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import api from '../utils/api.js';
 import Footer from './Footer.js';
 import Header from './Header.js';
 import Main from './Main.js';
@@ -6,6 +7,8 @@ import PopupWithForm from './PopupWithForm.js';
 import PopupWithImage from './PopupWithImage.js';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState({});
+
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
   const [isAddCardPopupOpen, setIsAddCardPopupOpen] = useState(false);
@@ -37,6 +40,13 @@ function App() {
     setIsAddCardPopupOpen(false);
     setIsImagePopupOpen(false);
   }
+
+  useEffect(() =>
+    api
+      .getUserInfo()
+      .then((res) => setCurrentUser(res))
+      .catch((err) => console.log(err))
+  );
 
   return (
     <div className="page">
