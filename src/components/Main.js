@@ -6,22 +6,22 @@ import Card from './Card';
 function Main(props) {
   const currentUser = useContext(CurrentUserContext);
 
-  const [cards, setCards] = useState([]);
+  // const [cards, setCards] = useState([]);
 
-  useEffect(() =>
-    api
-      .getInitialCards()
-      .then((res) =>
-        setCards(
-          res.map((card) => ({
-            link: card.link,
-            name: card.name,
-            likes: card.likes,
-          }))
-        )
-      )
-      .catch((err) => console.log(err))
-  );
+  // useEffect(() =>
+  //   api
+  //     .getInitialCards()
+  //     .then((res) =>
+  //       setCards(
+  //         res.map((card) => ({
+  //           link: card.link,
+  //           name: card.name,
+  //           likes: card.likes,
+  //         }))
+  //       )
+  //     )
+  //     .catch((err) => console.log(err))
+  // );
 
   return (
     <main className="main">
@@ -64,12 +64,10 @@ function Main(props) {
 
       <section className="places">
         <ul className="places__list">
-          {cards.map((card, index) => (
+          {props.cards.map((card, index) => (
             <Card
               key={index}
-              link={card.link}
-              name={card.name}
-              likes={card.likes.length}
+              card={card}
               onCardClick={() => props.onCardClick(card)}
             />
           ))}

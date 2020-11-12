@@ -10,15 +10,14 @@ import PopupWithImage from './PopupWithImage';
 function App() {
   const [currentUser, setCurrentUser] = useState({});
 
+  const [cards, setCards] = useState([]);
+
+  const [selectedCard, setSelectedCard] = useState({ link: '', name: '' });
+
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
   const [isAddCardPopupOpen, setIsAddCardPopupOpen] = useState(false);
   const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
-
-  const [selectedCard, setSelectedCard] = useState({
-    link: '',
-    name: '',
-  });
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
@@ -49,12 +48,30 @@ function App() {
       .catch((err) => console.log(err))
   );
 
+  useEffect(() =>
+    api
+      .getInitialCards()
+      .then((res) =>
+        setCards(
+          res.map((card) => ({
+            link: card.link,
+            name: card.name,
+            likes: card.likes,
+            _id: card._id,
+            owner: card.owner,
+          }))
+        )
+      )
+      .catch((err) => console.log(err))
+  );
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
         <div className="page__container">
           <Header />
           <Main
+            cards={cards}
             onEditAvatar={handleEditAvatarClick}
             onEditProfile={handleEditProfileClick}
             onAddCard={handleAddPlaceClick}
