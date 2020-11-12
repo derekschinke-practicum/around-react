@@ -51,6 +51,7 @@ function Main(props) {
               key={index}
               card={card}
               onCardClick={() => props.onCardClick(card)}
+              onCardLike={() => props.onCardLike(card)}
             />
           ))}
         </ul>

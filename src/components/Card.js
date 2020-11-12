@@ -31,6 +31,7 @@ function Card(props) {
             className={`button button_type_like ${
               isLiked ? 'button_type_liked' : ''
             }`}
+            onClick={props.onCardLike}
           ></button>
           <p className="card__likes">{props.card.likes.length}</p>
         </div>

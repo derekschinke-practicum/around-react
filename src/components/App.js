@@ -28,9 +28,20 @@ function App() {
   function handleAddPlaceClick() {
     setIsAddCardPopupOpen(true);
   }
+
   function handleCardClick(card) {
     setSelectedCard({ link: card.link, name: card.name });
     setIsImagePopupOpen(true);
+  }
+  function handleCardLike(card) {
+    const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    api
+      .updateCardLikes(card._id, isLiked)
+      .then((newCard) => {
+        const newCards = cards.map((c) => (c._id === card._id ? newCard : c));
+        setCards(newCards);
+      })
+      .catch((err) => console.log(err));
   }
 
   function handleCloseAllPopups(evt) {
@@ -76,6 +87,7 @@ function App() {
             onEditProfile={handleEditProfileClick}
             onAddCard={handleAddPlaceClick}
             onCardClick={(card) => handleCardClick(card)}
+            onCardLike={(card) => handleCardLike(card)}
           />
           <Footer />
 
