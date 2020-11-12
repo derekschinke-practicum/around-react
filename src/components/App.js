@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import CurrentUserContext from '../contexts/CurrentUserContext.js';
-import api from '../utils/api.js';
-import Footer from './Footer.js';
-import Header from './Header.js';
-import Main from './Main.js';
-import PopupWithForm from './PopupWithForm.js';
-import PopupWithImage from './PopupWithImage.js';
+import CurrentUserContext from '../contexts/CurrentUserContext';
+import api from '../utils/api';
+import Footer from './Footer';
+import Header from './Header';
+import Main from './Main';
+import PopupWithForm from './PopupWithForm';
+import PopupWithImage from './PopupWithImage';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
