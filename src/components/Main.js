@@ -6,23 +6,6 @@ import Card from './Card';
 function Main(props) {
   const currentUser = useContext(CurrentUserContext);
 
-  // const [cards, setCards] = useState([]);
-
-  // useEffect(() =>
-  //   api
-  //     .getInitialCards()
-  //     .then((res) =>
-  //       setCards(
-  //         res.map((card) => ({
-  //           link: card.link,
-  //           name: card.name,
-  //           likes: card.likes,
-  //         }))
-  //       )
-  //     )
-  //     .catch((err) => console.log(err))
-  // );
-
   return (
     <main className="main">
       <section className="profile">
