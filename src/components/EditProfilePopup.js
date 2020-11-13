@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import PopupWithForm from './PopupWithForm';
 
 function EditProfilePopup(props) {
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+
   return (
     <PopupWithForm
       name="edit"
@@ -19,6 +23,7 @@ function EditProfilePopup(props) {
           required
           minLength="2"
           maxLength="40"
+          onChange={setName()}
         />
         <span className="popup__error" id="profile-name-error"></span>
       </label>
@@ -32,6 +37,7 @@ function EditProfilePopup(props) {
           required
           minLength="2"
           maxLength="200"
+          onChange={setDescription()}
         />
         <span className="popup__error" id="profile-job-error"></span>
       </label>
