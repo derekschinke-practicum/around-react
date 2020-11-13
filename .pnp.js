@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@testing-library/dom", "npm:7.26.6"],
-            ["@testing-library/jest-dom", "npm:5.11.5"],
+            ["@testing-library/jest-dom", "npm:5.11.6"],
             ["@testing-library/react", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.1.2"],
             ["@testing-library/user-event", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:12.2.2"],
             ["eslint", "npm:7.13.0"],
@@ -2740,10 +2740,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@testing-library/jest-dom", [
-        ["npm:5.11.5", {
-          "packageLocation": "./.yarn/cache/@testing-library-jest-dom-npm-5.11.5-b180e4bc51-7289600209.zip/node_modules/@testing-library/jest-dom/",
+        ["npm:5.11.6", {
+          "packageLocation": "./.yarn/cache/@testing-library-jest-dom-npm-5.11.6-617e89cd3c-6c7eefa4ea.zip/node_modules/@testing-library/jest-dom/",
           "packageDependencies": [
-            ["@testing-library/jest-dom", "npm:5.11.5"],
+            ["@testing-library/jest-dom", "npm:5.11.6"],
             ["@babel/runtime", "npm:7.12.1"],
             ["@types/testing-library__jest-dom", "npm:5.9.5"],
             ["aria-query", "npm:4.2.2"],
@@ -3840,7 +3840,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["around-react", "workspace:."],
             ["@testing-library/dom", "npm:7.26.6"],
-            ["@testing-library/jest-dom", "npm:5.11.5"],
+            ["@testing-library/jest-dom", "npm:5.11.6"],
             ["@testing-library/react", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.1.2"],
             ["@testing-library/user-event", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:12.2.2"],
             ["eslint", "npm:7.13.0"],
