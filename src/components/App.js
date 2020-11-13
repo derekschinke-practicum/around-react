@@ -43,6 +43,15 @@ function App() {
       })
       .catch((err) => console.log(err));
   }
+  function handleCardDelete(card) {
+    api
+      .deleteCard(card._id)
+      .then(() => {
+        const newCards = cards.filter((c) => c._id !== card._id);
+        setCards(newCards);
+      })
+      .catch((err) => console.log(err));
+  }
 
   function handleCloseAllPopups(evt) {
     if (evt.target !== evt.currentTarget) return;
@@ -88,6 +97,7 @@ function App() {
             onAddCard={handleAddPlaceClick}
             onCardClick={(card) => handleCardClick(card)}
             onCardLike={(card) => handleCardLike(card)}
+            onCardDelete={(card) => handleCardDelete(card)}
           />
           <Footer />
 

@@ -14,6 +14,7 @@ function Card(props) {
         className={`button button_type_delete ${
           isOwn ? '' : 'button_type_delete_hidden'
         }`}
+        onClick={props.onCardDelete}
       ></button>
       <div
         role="img"
