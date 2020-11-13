@@ -6,6 +6,7 @@ import Header from './Header';
 import Main from './Main';
 import PopupWithForm from './PopupWithForm';
 import PopupWithImage from './PopupWithImage';
+import EditProfilePopup from './EditProfilePopup';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
@@ -101,40 +102,10 @@ function App() {
           />
           <Footer />
 
-          <PopupWithForm
-            name="edit"
-            title="Edit profile"
-            buttonValue="Save"
+          <EditProfilePopup
             isOpen={isEditProfilePopupOpen}
             onClose={handleCloseAllPopups}
-          >
-            <label>
-              <input
-                type="text"
-                name="name"
-                id="profile-name"
-                className="popup__input popup__input_type_name"
-                placeholder="Name"
-                required
-                minLength="2"
-                maxLength="40"
-              />
-              <span className="popup__error" id="profile-name-error"></span>
-            </label>
-            <label>
-              <input
-                type="text"
-                name="job"
-                id="profile-job"
-                className="popup__input popup__input_type_job"
-                placeholder="About me"
-                required
-                minLength="2"
-                maxLength="200"
-              />
-              <span className="popup__error" id="profile-job-error"></span>
-            </label>
-          </PopupWithForm>
+          />
 
           <PopupWithForm
             name="edit-avatar"
