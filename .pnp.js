@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@testing-library/dom", "npm:7.26.6"],
+            ["@testing-library/dom", "npm:7.26.7"],
             ["@testing-library/jest-dom", "npm:5.11.6"],
             ["@testing-library/react", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.1.2"],
             ["@testing-library/user-event", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:12.2.2"],
@@ -53,7 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-refresh", "npm:0.9.0"],
             ["react-scripts", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:4.0.0"],
             ["source-map-explorer", "npm:2.5.0"],
-            ["web-vitals", "npm:0.2.4"]
+            ["web-vitals", "npm:1.0.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -2737,6 +2737,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pretty-format", "npm:26.6.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:7.26.7", {
+          "packageLocation": "./.yarn/cache/@testing-library-dom-npm-7.26.7-239935284f-b69a2d4aaf.zip/node_modules/@testing-library/dom/",
+          "packageDependencies": [
+            ["@testing-library/dom", "npm:7.26.7"],
+            ["@babel/code-frame", "npm:7.10.4"],
+            ["@babel/runtime", "npm:7.12.5"],
+            ["@types/aria-query", "npm:4.2.0"],
+            ["aria-query", "npm:4.2.2"],
+            ["chalk", "npm:4.1.0"],
+            ["dom-accessibility-api", "npm:0.5.4"],
+            ["lz-string", "npm:1.4.4"],
+            ["pretty-format", "npm:26.6.2"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@testing-library/jest-dom", [
@@ -2783,7 +2798,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@testing-library/user-event", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:12.2.2"],
             ["@babel/runtime", "npm:7.12.1"],
-            ["@testing-library/dom", "npm:7.26.6"],
+            ["@testing-library/dom", "npm:7.26.7"],
             ["@types/testing-library__dom", null]
           ],
           "packagePeers": [
@@ -3839,7 +3854,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["around-react", "workspace:."],
-            ["@testing-library/dom", "npm:7.26.6"],
+            ["@testing-library/dom", "npm:7.26.7"],
             ["@testing-library/jest-dom", "npm:5.11.6"],
             ["@testing-library/react", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.1.2"],
             ["@testing-library/user-event", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:12.2.2"],
@@ -3855,7 +3870,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-refresh", "npm:0.9.0"],
             ["react-scripts", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:4.0.0"],
             ["source-map-explorer", "npm:2.5.0"],
-            ["web-vitals", "npm:0.2.4"]
+            ["web-vitals", "npm:1.0.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -17253,10 +17268,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["web-vitals", [
-        ["npm:0.2.4", {
-          "packageLocation": "./.yarn/cache/web-vitals-npm-0.2.4-c7d1bfe073-f7565075a9.zip/node_modules/web-vitals/",
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/web-vitals-npm-1.0.1-8d7987ead1-2c6de484c2.zip/node_modules/web-vitals/",
           "packageDependencies": [
-            ["web-vitals", "npm:0.2.4"]
+            ["web-vitals", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]

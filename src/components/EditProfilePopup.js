@@ -7,6 +7,10 @@ function EditProfilePopup(props) {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   useEffect(() => {
     setName(currentUser.name);
     setDescription(currentUser.about);

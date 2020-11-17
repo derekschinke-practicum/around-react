@@ -2037,6 +2037,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@testing-library/dom@npm:^7.26.7":
+  version: 7.26.7
+  resolution: "@testing-library/dom@npm:7.26.7"
+  dependencies:
+    "@babel/code-frame": ^7.10.4
+    "@babel/runtime": ^7.12.5
+    "@types/aria-query": ^4.2.0
+    aria-query: ^4.2.2
+    chalk: ^4.1.0
+    dom-accessibility-api: ^0.5.4
+    lz-string: ^1.4.4
+    pretty-format: ^26.6.2
+  checksum: b69a2d4aafc1ebfd3105563b3bd7edbe60b14478ffba8e04c009b2031477cd7d477ebcf474a605e7b4d2eafaaf05aece5cb3d248fb96e329efccc62fefd6fe6d
+  languageName: node
+  linkType: hard
+
 "@testing-library/jest-dom@npm:^5.11.6":
   version: 5.11.6
   resolution: "@testing-library/jest-dom@npm:5.11.6"
@@ -2977,7 +2993,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "around-react@workspace:."
   dependencies:
-    "@testing-library/dom": ^7.26.6
+    "@testing-library/dom": ^7.26.7
     "@testing-library/jest-dom": ^5.11.6
     "@testing-library/react": ^11.1.2
     "@testing-library/user-event": ^12.2.2
@@ -2993,7 +3009,7 @@ __metadata:
     react-refresh: ^0.9.0
     react-scripts: 4.0.0
     source-map-explorer: ^2.5.0
-    web-vitals: ^0.2.4
+    web-vitals: ^1.0.1
   languageName: unknown
   linkType: soft
 
@@ -14965,10 +14981,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:^0.2.4":
-  version: 0.2.4
-  resolution: "web-vitals@npm:0.2.4"
-  checksum: f7565075a9a57428656d848ba48fd85dfebe6af1a82c77f947b5112838b6e14d0d76768f438e6b25cef3fb57f8d5b3595b0bbc20e2c9bdf9761fd0a2c138ca61
+"web-vitals@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "web-vitals@npm:1.0.1"
+  checksum: 2c6de484c233b45f267b75ae81daab614e61ea1d8ece57c4bde373d71be919993248f4d203d9f49618971c48857ba4988e7a37cc5337708c6329e5651fc2aaa8
   languageName: node
   linkType: hard
 
