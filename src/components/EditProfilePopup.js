@@ -9,7 +9,6 @@ function EditProfilePopup(props) {
 
   function handleNameChange(e) {
     setName(e.target.value);
-    console.log(e.target.value);
   }
 
   function handleDescriptionChange(e) {
@@ -45,7 +44,7 @@ function EditProfilePopup(props) {
           required
           minLength="2"
           maxLength="40"
-          value={name}
+          defaultValue={name}
           onChange={handleNameChange}
         />
         <span className="popup__error" id="profile-name-error"></span>
@@ -60,7 +59,7 @@ function EditProfilePopup(props) {
           required
           minLength="2"
           maxLength="200"
-          value={description}
+          defaultValue={description}
           onChange={handleDescriptionChange}
         />
         <span className="popup__error" id="profile-job-error"></span>

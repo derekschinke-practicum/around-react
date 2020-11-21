@@ -79,7 +79,7 @@ class Api {
     const res = await fetch(this.baseUrl + '/users/me', {
       headers: this.headers,
       method: 'PATCH',
-      body: JSON.stringify({ name: info.name, about: info.job }),
+      body: JSON.stringify({ name: info.name, about: info.about }),
     });
     if (res.ok) {
       return res.json();

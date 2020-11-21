@@ -69,28 +69,32 @@ function App() {
     handleCloseAllPopups();
   }
 
-  useEffect(() =>
-    api
-      .getUserInfo()
-      .then((res) => setCurrentUser(res))
-      .catch((err) => console.log(err))
+  useEffect(
+    () =>
+      api
+        .getUserInfo()
+        .then((res) => setCurrentUser(res))
+        .catch((err) => console.log(err)),
+    []
   );
 
-  useEffect(() =>
-    api
-      .getInitialCards()
-      .then((res) =>
-        setCards(
-          res.map((card) => ({
-            link: card.link,
-            name: card.name,
-            likes: card.likes,
-            _id: card._id,
-            owner: card.owner,
-          }))
+  useEffect(
+    () =>
+      api
+        .getInitialCards()
+        .then((res) =>
+          setCards(
+            res.map((card) => ({
+              link: card.link,
+              name: card.name,
+              likes: card.likes,
+              _id: card._id,
+              owner: card.owner,
+            }))
+          )
         )
-      )
-      .catch((err) => console.log(err))
+        .catch((err) => console.log(err)),
+    []
   );
 
   return (
