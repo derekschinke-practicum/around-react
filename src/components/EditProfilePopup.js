@@ -7,8 +7,18 @@ function EditProfilePopup(props) {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
+  function handleNameChange(e) {
+    setName(e.target.value);
+    console.log(e.target.value);
+  }
+
+  function handleDescriptionChange(e) {
+    setDescription(e.target.value);
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
+    props.onUpdateUser({ name, about: description });
   }
 
   useEffect(() => {
@@ -21,8 +31,9 @@ function EditProfilePopup(props) {
       name="edit"
       title="Edit profile"
       buttonValue="Save"
-      isOpen={props.isEditProfilePopupOpen}
-      onClose={props.handleCloseAllPopups}
+      isOpen={props.isOpen}
+      onClose={props.onClose}
+      onSubmit={handleSubmit}
     >
       <label>
         <input
@@ -34,7 +45,8 @@ function EditProfilePopup(props) {
           required
           minLength="2"
           maxLength="40"
-          onChange={setName()}
+          value={name}
+          onChange={handleNameChange}
         />
         <span className="popup__error" id="profile-name-error"></span>
       </label>
@@ -48,7 +60,8 @@ function EditProfilePopup(props) {
           required
           minLength="2"
           maxLength="200"
-          onChange={setDescription()}
+          value={description}
+          onChange={handleDescriptionChange}
         />
         <span className="popup__error" id="profile-job-error"></span>
       </label>

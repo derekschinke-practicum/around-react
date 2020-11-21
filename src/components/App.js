@@ -54,12 +54,19 @@ function App() {
       .catch((err) => console.log(err));
   }
 
-  function handleCloseAllPopups(evt) {
-    if (evt.target !== evt.currentTarget) return;
+  function handleCloseAllPopups(e) {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddCardPopupOpen(false);
     setIsImagePopupOpen(false);
+  }
+
+  function handleUpdateUser({ name, about }) {
+    api
+      .patchUserInfo({ name, about })
+      .then((res) => setCurrentUser(res))
+      .catch((err) => console.log(err));
+    handleCloseAllPopups();
   }
 
   useEffect(() =>
@@ -105,6 +112,7 @@ function App() {
           <EditProfilePopup
             isOpen={isEditProfilePopupOpen}
             onClose={handleCloseAllPopups}
+            onUpdateUser={handleUpdateUser}
           />
 
           <PopupWithForm
