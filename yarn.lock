@@ -2021,9 +2021,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^7.27.1, @testing-library/dom@npm:^7.28.0":
-  version: 7.28.0
-  resolution: "@testing-library/dom@npm:7.28.0"
+"@testing-library/dom@npm:^7.28.1":
+  version: 7.28.1
+  resolution: "@testing-library/dom@npm:7.28.1"
   dependencies:
     "@babel/code-frame": ^7.10.4
     "@babel/runtime": ^7.12.5
@@ -2033,7 +2033,7 @@ __metadata:
     dom-accessibility-api: ^0.5.4
     lz-string: ^1.4.4
     pretty-format: ^26.6.2
-  checksum: df70e5caf648b6ae134d721cc210c0e4e939bbcf723f27bc063fbf22ece056675c155ac2b95eac5950672a2fbebfc67ca3691264f7aee39cfd2f7169b1099332
+  checksum: 1ff88e7637de3d80862091b5d55a0ca383a6b0430b4ffbd486a0b7e3fb190e1535244a7bf02c61dac9b556003431663e49ee4224b820630a14b5edf62cb93c6b
   languageName: node
   linkType: hard
 
@@ -2053,16 +2053,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^11.2.1":
-  version: 11.2.1
-  resolution: "@testing-library/react@npm:11.2.1"
+"@testing-library/react@npm:^11.2.2":
+  version: 11.2.2
+  resolution: "@testing-library/react@npm:11.2.2"
   dependencies:
     "@babel/runtime": ^7.12.5
-    "@testing-library/dom": ^7.27.1
+    "@testing-library/dom": ^7.28.1
   peerDependencies:
     react: "*"
     react-dom: "*"
-  checksum: f3ebe8fbd8f0b08fd48df5b355576a0409b87112992962437020ea7bc68090a8d6d8f6b4a1dcd5a7138d3227de89e65e4f4bab4b0f96c19601de39e3516cbb15
+  checksum: b2061c140201ab179a8cc3294ebc58f9a7ea5ffdb83ee246d59cb0ecfe4c2c99cdeedef66c280a52773453477f03866388ba7b36d2b144a3e646250c3f8efbc9
   languageName: node
   linkType: hard
 
@@ -2977,17 +2977,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "around-react@workspace:."
   dependencies:
-    "@testing-library/dom": ^7.28.0
+    "@testing-library/dom": ^7.28.1
     "@testing-library/jest-dom": ^5.11.6
-    "@testing-library/react": ^11.2.1
+    "@testing-library/react": ^11.2.2
     "@testing-library/user-event": ^12.2.2
-    eslint: ^7.13.0
+    eslint: ^7.14.0
     eslint-config-react-app: ^6.0.0
     gh-pages: ^3.1.0
     husky: ^4.3.0
     lint-staged: ^10.5.1
     normalize.css: ^8.0.1
-    prettier: ^2.1.2
+    prettier: ^2.2.0
     react: ^17.0.1
     react-dom: ^17.0.1
     react-refresh: ^0.9.0
@@ -6128,9 +6128,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.13.0":
-  version: 7.13.0
-  resolution: "eslint@npm:7.13.0"
+"eslint@npm:^7.14.0":
+  version: 7.14.0
+  resolution: "eslint@npm:7.14.0"
   dependencies:
     "@babel/code-frame": ^7.0.0
     "@eslint/eslintrc": ^0.2.1
@@ -6171,7 +6171,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 6ea6c763f1b1e484ec5da67e10125cc9b6ccef5c355470cb71a2e29c70b24c0ef325dd45e775800dd78dbcfba2a9c85b9096f438cdb468b32b6680c2ddebb459
+  checksum: 6c1c9ae3cd1ec1c9238a92380049509e9c18fecfb4c9982d4f4d49ec681ec7a2cbc04bbd354ddf10588727f143a158c7a0a82b2fd662197f554bd435cfdb250f
   languageName: node
   linkType: hard
 
@@ -11857,12 +11857,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "prettier@npm:2.1.2"
+"prettier@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "prettier@npm:2.2.0"
   bin:
     prettier: bin-prettier.js
-  checksum: bedc24c568efbcfe45f255558900777e2fabb36bf28ed4c22d2456eb22dfb012d12e566a46472ea5b857a4e9f263e888f7e316527d00bb58188f1820b0b0031a
+  checksum: fe7e2ac725d3b067204700c5fcee415a90e1c1ab01735a7748bce791db61a3242939a032bfe5f8faa2c054571f4e9bac266b766e483648511af72f69fb041a6c
   languageName: node
   linkType: hard
 

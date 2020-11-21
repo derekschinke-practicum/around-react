@@ -37,17 +37,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@testing-library/dom", "npm:7.28.0"],
+            ["@testing-library/dom", "npm:7.28.1"],
             ["@testing-library/jest-dom", "npm:5.11.6"],
-            ["@testing-library/react", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.2.1"],
+            ["@testing-library/react", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.2.2"],
             ["@testing-library/user-event", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:12.2.2"],
-            ["eslint", "npm:7.13.0"],
+            ["eslint", "npm:7.14.0"],
             ["eslint-config-react-app", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:6.0.0"],
             ["gh-pages", "npm:3.1.0"],
             ["husky", "npm:4.3.0"],
             ["lint-staged", "npm:10.5.1"],
             ["normalize.css", "npm:8.0.1"],
-            ["prettier", "npm:2.1.2"],
+            ["prettier", "npm:2.2.0"],
             ["react", "npm:17.0.1"],
             ["react-dom", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:17.0.1"],
             ["react-refresh", "npm:0.9.0"],
@@ -2723,10 +2723,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@testing-library/dom", [
-        ["npm:7.28.0", {
-          "packageLocation": "./.yarn/cache/@testing-library-dom-npm-7.28.0-877b8c0a27-df70e5caf6.zip/node_modules/@testing-library/dom/",
+        ["npm:7.28.1", {
+          "packageLocation": "./.yarn/cache/@testing-library-dom-npm-7.28.1-a72543a133-1ff88e7637.zip/node_modules/@testing-library/dom/",
           "packageDependencies": [
-            ["@testing-library/dom", "npm:7.28.0"],
+            ["@testing-library/dom", "npm:7.28.1"],
             ["@babel/code-frame", "npm:7.10.4"],
             ["@babel/runtime", "npm:7.12.5"],
             ["@types/aria-query", "npm:4.2.0"],
@@ -2757,12 +2757,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@testing-library/react", [
-        ["virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.2.1", {
-          "packageLocation": "./.yarn/$$virtual/@testing-library-react-virtual-c15fba6550/0/cache/@testing-library-react-npm-11.2.1-fd13cef46d-f3ebe8fbd8.zip/node_modules/@testing-library/react/",
+        ["virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.2.2", {
+          "packageLocation": "./.yarn/$$virtual/@testing-library-react-virtual-4b2eb81b07/0/cache/@testing-library-react-npm-11.2.2-acf40a3238-b2061c1402.zip/node_modules/@testing-library/react/",
           "packageDependencies": [
-            ["@testing-library/react", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.2.1"],
+            ["@testing-library/react", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.2.2"],
             ["@babel/runtime", "npm:7.12.5"],
-            ["@testing-library/dom", "npm:7.28.0"],
+            ["@testing-library/dom", "npm:7.28.1"],
             ["@types/react", null],
             ["@types/react-dom", null],
             ["react", "npm:17.0.1"],
@@ -2783,7 +2783,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@testing-library/user-event", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:12.2.2"],
             ["@babel/runtime", "npm:7.12.1"],
-            ["@testing-library/dom", "npm:7.28.0"],
+            ["@testing-library/dom", "npm:7.28.1"],
             ["@types/testing-library__dom", null]
           ],
           "packagePeers": [
@@ -3839,17 +3839,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["around-react", "workspace:."],
-            ["@testing-library/dom", "npm:7.28.0"],
+            ["@testing-library/dom", "npm:7.28.1"],
             ["@testing-library/jest-dom", "npm:5.11.6"],
-            ["@testing-library/react", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.2.1"],
+            ["@testing-library/react", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:11.2.2"],
             ["@testing-library/user-event", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:12.2.2"],
-            ["eslint", "npm:7.13.0"],
+            ["eslint", "npm:7.14.0"],
             ["eslint-config-react-app", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:6.0.0"],
             ["gh-pages", "npm:3.1.0"],
             ["husky", "npm:4.3.0"],
             ["lint-staged", "npm:10.5.1"],
             ["normalize.css", "npm:8.0.1"],
-            ["prettier", "npm:2.1.2"],
+            ["prettier", "npm:2.2.0"],
             ["react", "npm:17.0.1"],
             ["react-dom", "virtual:cab3ccb482889587ed9f4040251a09803095cf46ea5542195fa07d7781a849666543235dcac54d218e8e1e2d43fbfe63a91aaf4acaff337cc97a7ce6f69084ad#npm:17.0.1"],
             ["react-refresh", "npm:0.9.0"],
@@ -7138,10 +7138,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:7.13.0", {
-          "packageLocation": "./.yarn/cache/eslint-npm-7.13.0-a91747fbf7-6ea6c763f1.zip/node_modules/eslint/",
+        ["npm:7.14.0", {
+          "packageLocation": "./.yarn/cache/eslint-npm-7.14.0-ff9b6a27bd-6c1c9ae3cd.zip/node_modules/eslint/",
           "packageDependencies": [
-            ["eslint", "npm:7.13.0"],
+            ["eslint", "npm:7.14.0"],
             ["@babel/code-frame", "npm:7.10.4"],
             ["@eslint/eslintrc", "npm:0.2.1"],
             ["ajv", "npm:6.12.6"],
@@ -7257,7 +7257,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", null],
             ["babel-eslint", null],
             ["confusing-browser-globals", "npm:1.0.10"],
-            ["eslint", "npm:7.13.0"],
+            ["eslint", "npm:7.14.0"],
             ["eslint-plugin-flowtype", null],
             ["eslint-plugin-import", null],
             ["eslint-plugin-jest", null],
@@ -13787,10 +13787,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["prettier", [
-        ["npm:2.1.2", {
-          "packageLocation": "./.yarn/cache/prettier-npm-2.1.2-9d456ef3cd-bedc24c568.zip/node_modules/prettier/",
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/prettier-npm-2.2.0-9fa8f01d1a-fe7e2ac725.zip/node_modules/prettier/",
           "packageDependencies": [
-            ["prettier", "npm:2.1.2"]
+            ["prettier", "npm:2.2.0"]
           ],
           "linkType": "HARD",
         }]
