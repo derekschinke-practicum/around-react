@@ -7,6 +7,7 @@ import Main from './Main';
 import PopupWithForm from './PopupWithForm';
 import PopupWithImage from './PopupWithImage';
 import EditProfilePopup from './EditProfilePopup';
+import EditAvatarPopup from './EditAvatarPopup';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
@@ -54,7 +55,7 @@ function App() {
       .catch((err) => console.log(err));
   }
 
-  function handleCloseAllPopups(e) {
+  function closeAllPopups(e) {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddCardPopupOpen(false);
@@ -66,7 +67,7 @@ function App() {
       .patchUserInfo({ name, about })
       .then((res) => setCurrentUser(res))
       .catch((err) => console.log(err));
-    handleCloseAllPopups();
+    closeAllPopups();
   }
 
   useEffect(
@@ -115,36 +116,21 @@ function App() {
 
           <EditProfilePopup
             isOpen={isEditProfilePopupOpen}
-            onClose={handleCloseAllPopups}
+            onClose={closeAllPopups}
             onUpdateUser={handleUpdateUser}
           />
 
-          <PopupWithForm
-            name="edit-avatar"
-            title="Change profile picture"
-            buttonValue="Save"
+          <EditAvatarPopup
             isOpen={isEditAvatarPopupOpen}
-            onClose={handleCloseAllPopups}
-          >
-            <label>
-              <input
-                type="url"
-                name="url"
-                id="profile-avatar"
-                className="popup__input"
-                placeholder="Image link"
-                required
-              />
-              <span className="popup__error" id="profile-avatar-error"></span>
-            </label>
-          </PopupWithForm>
+            onClose={closeAllPopups}
+          />
 
           <PopupWithForm
             name="add"
             title="New place"
             buttonValue="Create"
             isOpen={isAddCardPopupOpen}
-            onClose={handleCloseAllPopups}
+            onClose={closeAllPopups}
           >
             <label>
               <input
@@ -176,7 +162,7 @@ function App() {
           <PopupWithImage
             card={selectedCard}
             isOpen={isImagePopupOpen}
-            onClose={handleCloseAllPopups}
+            onClose={closeAllPopups}
           />
         </div>
       </div>
