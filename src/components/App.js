@@ -66,24 +66,24 @@ function App() {
     api
       .patchUserInfo({ name, about })
       .then((res) => setCurrentUser(res))
+      .then(closeAllPopups())
       .catch((err) => console.log(err));
-    closeAllPopups();
   }
 
   function handleUpdateAvatar({ avatar }) {
     api
       .patchAvatarImage(avatar.current.value)
       .then((res) => setCurrentUser(res))
+      .then(closeAllPopups())
       .catch((err) => console.log(err));
-    closeAllPopups();
   }
 
   function handleAddCard({ title, link }) {
     api
       .postCard({ title, link })
-      .then((newCard) => setCards([...cards, newCard]))
+      .then((newCard) => setCards([newCard, ...cards]))
+      .then(closeAllPopups())
       .catch((err) => console.log(err));
-    closeAllPopups();
   }
 
   useEffect(
@@ -99,19 +99,9 @@ function App() {
     () =>
       api
         .getInitialCards()
-        .then((res) =>
-          setCards(
-            res.map((card) => ({
-              link: card.link,
-              name: card.name,
-              likes: card.likes,
-              _id: card._id,
-              owner: card.owner,
-            }))
-          )
-        )
+        .then((cards) => setCards(cards))
         .catch((err) => console.log(err)),
-    [cards]
+    []
   );
 
   return (
