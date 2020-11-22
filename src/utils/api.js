@@ -51,11 +51,11 @@ class Api {
     return Promise.reject(`Error: ${res.status}`);
   }
 
-  async postCard({ title, url }) {
+  async postCard({ title, link }) {
     const res = await fetch(this.baseUrl + '/cards', {
       headers: this.headers,
       method: 'POST',
-      body: JSON.stringify({ name: title, link: url }),
+      body: JSON.stringify({ name: title, link: link }),
     });
     if (res.ok) {
       return res.json();
@@ -79,7 +79,7 @@ class Api {
     const res = await fetch(this.baseUrl + '/users/me', {
       headers: this.headers,
       method: 'PATCH',
-      body: JSON.stringify({ name: info.name, about: info.job }),
+      body: JSON.stringify({ name: info.name, about: info.about }),
     });
     if (res.ok) {
       return res.json();
