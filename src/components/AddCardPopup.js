@@ -12,15 +12,15 @@ function AddCardPopup(props) {
     setLink(e.target.value);
   }
 
-  useEffect(() => {
-    setTitle('');
-    setLink('');
-  }, [props.isOpen]);
-
   function handleSubmit(e) {
     e.preventDefault();
     props.onAddCard({ title, link });
   }
+
+  useEffect(() => {
+    setTitle('');
+    setLink('');
+  }, [props.isOpen]);
 
   return (
     <PopupWithForm
