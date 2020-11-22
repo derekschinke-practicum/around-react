@@ -1,6 +1,24 @@
+import { useState } from 'react';
 import PopupWithForm from './PopupWithForm';
 
 function AddCardPopup(props) {
+  const [title, setTitle] = useState('');
+  const [link, setLink] = useState('');
+
+  function handleTitleChange(e) {
+    setTitle(e.target.value);
+  }
+  function handleLinkChange(e) {
+    setLink(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setTitle('');
+    setLink('');
+    props.onAddCard({ title, link });
+  }
+
   return (
     <PopupWithForm
       name="add"
@@ -8,6 +26,7 @@ function AddCardPopup(props) {
       buttonValue="Create"
       isOpen={props.isOpen}
       onClose={props.onClose}
+      onSubmit={handleSubmit}
     >
       <label>
         <input
@@ -19,6 +38,8 @@ function AddCardPopup(props) {
           required
           minLength="2"
           maxLength="30"
+          value={title}
+          onChange={handleTitleChange}
         />
         <span className="popup__error" id="card-title-error"></span>
       </label>
@@ -31,6 +52,8 @@ function AddCardPopup(props) {
           className="popup__input popup__input_type_image-url"
           placeholder="Image link"
           required
+          value={link}
+          onChange={handleLinkChange}
         />
         <span className="popup__error" id="card-url-error"></span>
       </label>

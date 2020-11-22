@@ -78,6 +78,14 @@ function App() {
     closeAllPopups();
   }
 
+  function handleAddCard({ title, link }) {
+    api
+      .postCard({ title, link })
+      .then((newCard) => setCards([...cards, newCard]))
+      .catch((err) => console.log(err));
+    closeAllPopups();
+  }
+
   useEffect(
     () =>
       api
@@ -103,7 +111,7 @@ function App() {
           )
         )
         .catch((err) => console.log(err)),
-    []
+    [cards]
   );
 
   return (
@@ -134,7 +142,11 @@ function App() {
             onUpdateAvatar={handleUpdateAvatar}
           />
 
-          <AddCardPopup isOpen={isAddCardPopupOpen} onClose={closeAllPopups} />
+          <AddCardPopup
+            isOpen={isAddCardPopupOpen}
+            onClose={closeAllPopups}
+            onAddCard={handleAddCard}
+          />
 
           <PopupWithImage
             card={selectedCard}
