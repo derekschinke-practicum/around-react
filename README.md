@@ -13,6 +13,11 @@ This project is part of the **Creating an Interface with React** sprint for the 
 HTML, CSS, JS, and JSX technologies it demonstrates are:
 
 - React
+
+  - Hooks
+  - Router
+  - Contexts
+
 - Yarn 2, [Zero-Installs](https://yarnpkg.com/features/zero-installs)
 - flexbox
 - <abbr title="Block, Element, Modifier">BEM</abbr> methodology
