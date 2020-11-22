@@ -4,10 +4,10 @@ import CurrentUserContext from '../contexts/CurrentUserContext';
 import Footer from './Footer';
 import Header from './Header';
 import Main from './Main';
-import PopupWithForm from './PopupWithForm';
 import PopupWithImage from './PopupWithImage';
 import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
+import AddCardPopup from './AddCardPopup';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
@@ -134,39 +134,7 @@ function App() {
             onUpdateAvatar={handleUpdateAvatar}
           />
 
-          <PopupWithForm
-            name="add"
-            title="New place"
-            buttonValue="Create"
-            isOpen={isAddCardPopupOpen}
-            onClose={closeAllPopups}
-          >
-            <label>
-              <input
-                type="text"
-                name="title"
-                id="card-title"
-                className="popup__input popup__input_type_title"
-                placeholder="Title"
-                required
-                minLength="2"
-                maxLength="30"
-              />
-              <span className="popup__error" id="card-title-error"></span>
-            </label>
-
-            <label>
-              <input
-                type="url"
-                name="url"
-                id="card-url"
-                className="popup__input popup__input_type_image-url"
-                placeholder="Image link"
-                required
-              />
-              <span className="popup__error" id="card-url-error"></span>
-            </label>
-          </PopupWithForm>
+          <AddCardPopup isOpen={isAddCardPopupOpen} onClose={closeAllPopups} />
 
           <PopupWithImage
             card={selectedCard}
