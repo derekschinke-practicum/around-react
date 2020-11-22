@@ -70,6 +70,14 @@ function App() {
     closeAllPopups();
   }
 
+  function handleUpdateAvatar({ avatar }) {
+    api
+      .patchAvatarImage(avatar.current.value)
+      .then((res) => setCurrentUser(res))
+      .catch((err) => console.log(err));
+    closeAllPopups();
+  }
+
   useEffect(
     () =>
       api
@@ -123,6 +131,7 @@ function App() {
           <EditAvatarPopup
             isOpen={isEditAvatarPopupOpen}
             onClose={closeAllPopups}
+            onUpdateAvatar={handleUpdateAvatar}
           />
 
           <PopupWithForm
