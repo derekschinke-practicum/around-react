@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PopupWithForm from './PopupWithForm';
 
 function AddCardPopup(props) {
@@ -12,10 +12,13 @@ function AddCardPopup(props) {
     setLink(e.target.value);
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  useEffect(() => {
     setTitle('');
     setLink('');
+  }, [props.isOpen]);
+
+  function handleSubmit(e) {
+    e.preventDefault();
     props.onAddCard({ title, link });
   }
 
