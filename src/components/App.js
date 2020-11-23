@@ -65,44 +65,46 @@ function App() {
   function handleUpdateUser({ name, about }) {
     api
       .patchUserInfo({ name, about })
-      .then((res) => setCurrentUser(res))
-      .then(closeAllPopups())
+      .then((res) => {
+        setCurrentUser(res);
+        closeAllPopups();
+      })
       .catch((err) => console.log(err));
   }
 
   function handleUpdateAvatar({ avatar }) {
     api
       .patchAvatarImage(avatar.current.value)
-      .then((res) => setCurrentUser(res))
-      .then(closeAllPopups())
+      .then((res) => {
+        setCurrentUser(res);
+        closeAllPopups();
+      })
       .catch((err) => console.log(err));
   }
 
   function handleAddCard({ title, link }) {
     api
       .postCard({ title, link })
-      .then((newCard) => setCards([newCard, ...cards]))
-      .then(closeAllPopups())
+      .then((newCard) => {
+        setCards([newCard, ...cards]);
+        closeAllPopups();
+      })
       .catch((err) => console.log(err));
   }
 
-  useEffect(
-    () =>
-      api
-        .getUserInfo()
-        .then((res) => setCurrentUser(res))
-        .catch((err) => console.log(err)),
-    []
-  );
+  useEffect(() => {
+    api
+      .getUserInfo()
+      .then((res) => setCurrentUser(res))
+      .catch((err) => console.log(err));
+  }, []);
 
-  useEffect(
-    () =>
-      api
-        .getInitialCards()
-        .then((cards) => setCards(cards))
-        .catch((err) => console.log(err)),
-    []
-  );
+  useEffect(() => {
+    api
+      .getInitialCards()
+      .then((cards) => setCards(cards))
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
