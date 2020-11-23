@@ -1363,7 +1363,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5":
+"@babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5":
   version: 7.12.5
   resolution: "@babel/runtime@npm:7.12.5"
   dependencies:
@@ -2207,7 +2207,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*":
+"@types/jest@npm:*, @types/jest@npm:^26.0.15":
   version: 26.0.15
   resolution: "@types/jest@npm:26.0.15"
   dependencies:
@@ -2981,7 +2981,16 @@ __metadata:
     "@testing-library/jest-dom": ^5.11.6
     "@testing-library/react": ^11.2.2
     "@testing-library/user-event": ^12.2.2
+    "@types/jest": ^26.0.15
     eslint: ^7.14.0
+    eslint-config-react-app: ^6.0.0
+    eslint-plugin-flowtype: ^5.2.0
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-jest: ^24.1.3
+    eslint-plugin-jsx-a11y: ^6.4.1
+    eslint-plugin-react: ^7.21.5
+    eslint-plugin-react-hooks: ^4.2.0
+    eslint-plugin-testing-library: ^3.10.1
     gh-pages: ^3.1.0
     husky: ^4.3.0
     lint-staged: ^10.5.1
@@ -3264,7 +3273,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axobject-query@npm:^2.1.2":
+"axe-core@npm:^4.0.2":
+  version: 4.1.1
+  resolution: "axe-core@npm:4.1.1"
+  checksum: cd00c2d359f118bb2631a0e018a5d9183996488aec5dd52c7cea2c96613725c388268f0b01d22f594271837d5f26b586a1e79e302578527fe28e71ea433c0660
+  languageName: node
+  linkType: hard
+
+"axobject-query@npm:^2.1.2, axobject-query@npm:^2.2.0":
   version: 2.2.0
   resolution: "axobject-query@npm:2.2.0"
   checksum: c963a3ba9f30a402c32c6addf7798e6cf3471228d78b5c54bdd11f18d2b3da1bafe874bc6add142b93bf0ee0cb6a6fb3e48a992dea38ec2f5a52697498db3ac1
@@ -5945,6 +5961,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-jest@npm:^24.1.3":
+  version: 24.1.3
+  resolution: "eslint-plugin-jest@npm:24.1.3"
+  dependencies:
+    "@typescript-eslint/experimental-utils": ^4.0.1
+  peerDependencies:
+    eslint: ">=5"
+  checksum: d1b8f14d7553ee9cd1b85d4e3478439b9c2c789fff9b10f19f047c4aae83acb62b966a4fdd5182740a6d9339ac54d56e67be5e15f3326a53ea6b772753076cd7
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-jsx-a11y@npm:^6.3.1":
   version: 6.3.1
   resolution: "eslint-plugin-jsx-a11y@npm:6.3.1"
@@ -5963,6 +5990,27 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7
   checksum: 3261972201e011625b373b9e924f8f05cd1c420d3157689a6b91e5864f42c812ef2d723673ddfac36171d91ee40bc5a1041018ad69b4b0aff0c1967333ff9302
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-jsx-a11y@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "eslint-plugin-jsx-a11y@npm:6.4.1"
+  dependencies:
+    "@babel/runtime": ^7.11.2
+    aria-query: ^4.2.2
+    array-includes: ^3.1.1
+    ast-types-flow: ^0.0.7
+    axe-core: ^4.0.2
+    axobject-query: ^2.2.0
+    damerau-levenshtein: ^1.0.6
+    emoji-regex: ^9.0.0
+    has: ^1.0.3
+    jsx-ast-utils: ^3.1.0
+    language-tags: ^1.0.5
+  peerDependencies:
+    eslint: ^3 || ^4 || ^5 || ^6 || ^7
+  checksum: 680d13f5e3e23f7e9b5208c87fa81497bff31909796cbaf5f6245462e54f4bf6b5d03db97662eb67afb344d3f525ade0902472bc807b411b2c3806549faf7203
   languageName: node
   linkType: hard
 
@@ -5993,6 +6041,17 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7
   checksum: a7123f6feb287ad7e15d36b1c9fda8f78a0f0d39b9ee2d6479a5f0ad0effb8f60f639ef7449cecabb711095060e487f0950b69478b22768547b909c0de4f3afd
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-testing-library@npm:^3.10.1":
+  version: 3.10.1
+  resolution: "eslint-plugin-testing-library@npm:3.10.1"
+  dependencies:
+    "@typescript-eslint/experimental-utils": ^3.10.1
+  peerDependencies:
+    eslint: ^5 || ^6 || ^7
+  checksum: 32f96d4a8a90cd9f871321bf3bd9cfdcb85f8581298355e8fa6c7fd080308a961a8fdcf78c43b8482e3e5fb369664d990d733c131f0281e2757a7c33d3a5ba95
   languageName: node
   linkType: hard
 
@@ -9088,7 +9147,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jsx-ast-utils@npm:^2.4.1 || ^3.0.0":
+"jsx-ast-utils@npm:^2.4.1 || ^3.0.0, jsx-ast-utils@npm:^3.1.0":
   version: 3.1.0
   resolution: "jsx-ast-utils@npm:3.1.0"
   dependencies:
