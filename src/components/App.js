@@ -43,7 +43,9 @@ function App() {
         const newCards = cards.map((c) => (c._id === card._id ? newCard : c));
         setCards(newCards);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   }
   function handleCardDelete(card) {
     api
@@ -52,7 +54,9 @@ function App() {
         const newCards = cards.filter((c) => c._id !== card._id);
         setCards(newCards);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function closeAllPopups(e) {
@@ -69,7 +73,9 @@ function App() {
         setCurrentUser(res);
         closeAllPopups();
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function handleUpdateAvatar({ avatar }) {
@@ -79,7 +85,9 @@ function App() {
         setCurrentUser(res);
         closeAllPopups();
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function handleAddCard({ title, link }) {
@@ -89,21 +97,31 @@ function App() {
         setCards([newCard, ...cards]);
         closeAllPopups();
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   useEffect(() => {
     api
       .getUserInfo()
-      .then((res) => setCurrentUser(res))
-      .catch((err) => console.log(err));
+      .then((res) => {
+        setCurrentUser(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   useEffect(() => {
     api
       .getInitialCards()
-      .then((cards) => setCards(cards))
-      .catch((err) => console.log(err));
+      .then((cards) => {
+        setCards(cards);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return (
@@ -116,9 +134,15 @@ function App() {
             onEditAvatar={handleEditAvatarClick}
             onEditProfile={handleEditProfileClick}
             onAddCard={handleAddPlaceClick}
-            onCardClick={(card) => handleCardClick(card)}
-            onCardLike={(card) => handleCardLike(card)}
-            onCardDelete={(card) => handleCardDelete(card)}
+            onCardClick={(card) => {
+              handleCardClick(card);
+            }}
+            onCardLike={(card) => {
+              handleCardLike(card);
+            }}
+            onCardDelete={(card) => {
+              handleCardDelete(card);
+            }}
           />
           <Footer />
 

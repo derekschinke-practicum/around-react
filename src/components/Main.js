@@ -50,9 +50,15 @@ function Main(props) {
             <Card
               key={index}
               card={card}
-              onCardClick={() => props.onCardClick(card)}
-              onCardLike={() => props.onCardLike(card)}
-              onCardDelete={() => props.onCardDelete(card)}
+              onCardClick={() => {
+                props.onCardClick(card);
+              }}
+              onCardLike={() => {
+                props.onCardLike(card);
+              }}
+              onCardDelete={() => {
+                props.onCardDelete(card);
+              }}
             />
           ))}
         </ul>
