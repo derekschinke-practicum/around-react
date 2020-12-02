@@ -2066,14 +2066,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:^12.2.2":
-  version: 12.2.2
-  resolution: "@testing-library/user-event@npm:12.2.2"
+"@testing-library/user-event@npm:^12.3.0":
+  version: 12.3.0
+  resolution: "@testing-library/user-event@npm:12.3.0"
   dependencies:
     "@babel/runtime": ^7.10.2
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: 9321ce8af448fbfb08a554a0fc005b69c3d8c4172274e68e2ee5e8dcd651c62b498fa8970d39d7ed04660d685f666afb34ba01b95fa13a81d703011da13837d6
+  checksum: e97ef0e420dcda3d14b0f778230f76167ac1e9059c80ddb51911273df699af84918f0d6d2fc532d68a0f12d2007febaaabc0555e0eddbed440f88d5ba5123054
   languageName: node
   linkType: hard
 
@@ -2980,7 +2980,7 @@ __metadata:
     "@testing-library/dom": ^7.28.1
     "@testing-library/jest-dom": ^5.11.6
     "@testing-library/react": ^11.2.2
-    "@testing-library/user-event": ^12.2.2
+    "@testing-library/user-event": ^12.3.0
     eslint: ^7.14.0
     eslint-config-prettier: ^6.15.0
     eslint-config-react-app: ^6.0.0
@@ -2993,7 +2993,7 @@ __metadata:
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-testing-library: ^3.10.1
     gh-pages: ^3.1.0
-    husky: ^4.3.0
+    husky: ^4.3.1
     lint-staged: ^10.5.2
     normalize.css: ^8.0.1
     prettier: ^2.2.1
@@ -7689,9 +7689,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"husky@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "husky@npm:4.3.0"
+"husky@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "husky@npm:4.3.1"
   dependencies:
     chalk: ^4.0.0
     ci-info: ^2.0.0
@@ -7706,7 +7706,7 @@ fsevents@^1.2.7:
   bin:
     husky-run: bin/run.js
     husky-upgrade: lib/upgrader/bin.js
-  checksum: c212d9732de84cbd7c25d907b874f7844503f85e28c0512518cddbac9854c54f1c569e81c5b70387f1e3c27d35c2b43256c811cf06fdad066565c5fc178f33f7
+  checksum: f05e412061d2bd898ff3c2e1f72260f9a2886feeae6bf2fb533df34cc9010cf66c8179a21b5a9ff95a78f2ff1b7820e0a259b6301f9520d1066090df8ca0870f
   languageName: node
   linkType: hard
 
